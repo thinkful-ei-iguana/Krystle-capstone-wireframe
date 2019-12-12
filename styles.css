@@ -1,0 +1,49 @@
+.Form {
+    background-color: #1d3656;
+    color: #dedede;
+    padding: 16px;
+    max-width: 332px;
+  }
+  
+  .Form label {
+    display: block;
+    font-size: 16px;
+    padding-bottom: 8px;
+  }
+  
+  .Form input,
+  .Form textarea,
+  .Form select {
+    font-size: 14px;
+    padding: 8px;
+    width: 300px;
+  }
+  
+  .Form select {
+    height: 33px;
+  }
+  
+  .Form > .field {
+    margin-bottom: 16px;
+  }
+  .Form> .buttons {
+    margin-top: 26px;
+  }
+  
+  .Form button {
+    background-color: #010d1e;
+    border-radius: 4px;
+    border: 0;
+    color: #cacaca;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .Form button[type="submit"]:hover {
+    background-color: #29862e;
+    color: white;
+  }
+  
