@@ -1,15 +1,14 @@
 import React, {Component} from 'react';
 import {Route, Link} from 'react-router-dom';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import NoteListNav from '../NoteListNav/NoteListNav';
-import NotePageNav from '../NotePageNav/NotePageNav';
-import NoteListMain from '../NoteListMain/NoteListMain';
-import NotePageMain from '../NotePageMain/NotePageMain';
+import ListNav from '../ListNav/ListNav';
+import ListMain from '../ListMain/ListMain';
+import PageMain from '../PageMain/PageMain';
 import ApiContext from '../ApiContext';
 import config from '../config';
 import './App.css';
 import FolderForm from '../FolderForm/folderForm';
-import NotesForm from '../NotesForm/notesForm';
+import Form from '../Form/Form';
 import ErrorBoundary from '../ErrorBoundary/errorBoundary'
 
 class App extends Component {
@@ -71,7 +70,7 @@ class App extends Component {
                         exact
                         key={path}
                         path={path}
-                        component={NoteListNav}
+                        component={ListNav}
                     />
                 ))}
                 <Route path="/note/:noteId" component={NotePageNav} />
@@ -89,13 +88,13 @@ class App extends Component {
                         exact
                         key={path}
                         path={path}
-                        component={NoteListMain}
+                        component={ListMain}
                     />
                 ))}
                 {/* <Route path="/" exact key="/" component={NoteListMain}/>
                 <Route path="/folder/:folderId" exact key="/folder/:folderId" component={NoteListMain}/> */}
-                <Route path="/note/:noteId" component={NotePageMain} />
-                <Route path="/add-note" component={NotesForm} />
+                <Route path="/note/:noteId" component={PageMain} />
+                <Route path="/add-note" component={Form} />
                 <Route path="/add-folder" component={FolderForm} />
             </>
         );
